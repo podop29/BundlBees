@@ -1,0 +1,257 @@
+/*-- -------------------------- -->
+<---            FAQ             -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  @keyframes floatAnimation {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-2rem);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  @keyframes floatAnimation2 {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-3rem);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  #faq-993 {
+    padding: clamp(6.75rem, 9.82vw, 11.25rem) 1rem;
+    padding-bottom: 0;
+    position: relative;
+  }
+  #faq-993 .cs-container {
+    width: 100%;
+    max-width: 66.5rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #faq-993 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+  }
+  #faq-993 .cs-faq-group {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  #faq-993 .cs-faq-item {
+    list-style: none;
+    width: 100%;
+    background-color: #f7f7f7;
+    /* clips all corners of the button that overlap the rounded border */
+    overflow: hidden;
+    transition: border-bottom 0.3s;
+  }
+  #faq-993 .cs-faq-item.active {
+    background-color: var(--headerColor);
+  }
+  #faq-993 .cs-faq-item.active .cs-button {
+    background-color: #1a1a1a;
+    color: var(--primary);
+    border-bottom: 1px solid #484848;
+  }
+  #faq-993 .cs-faq-item.active .cs-button:before {
+    background-color: var(--primary);
+    transform: rotate(315deg);
+  }
+  #faq-993 .cs-faq-item.active .cs-button:after {
+    background-color: var(--primary);
+    transform: rotate(-315deg);
+  }
+  #faq-993 .cs-faq-item.active .cs-item-p {
+    height: auto;
+    /* 20px - 24px top & bottom */
+    /* 16px - 24px left & right */
+    padding: clamp(1.25rem, 1.3vw, 1.5rem) clamp(1rem, 2vw, 1.5rem);
+    opacity: 1;
+    color: var(--bodyTextColorWhite);
+  }
+  #faq-993 .cs-button {
+    /* 16px - 20px */
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    line-height: 1.2em;
+    text-align: left;
+    font-weight: bold;
+    /* 20px - 24px */
+    padding: clamp(1.25rem, 2vw, 1.5rem);
+    background-color: #f7f7f7;
+    border: none;
+    color: var(--headerColor);
+    display: block;
+    width: 100%;
+    position: relative;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  #faq-993 .cs-button:hover {
+    cursor: pointer;
+  }
+  #faq-993 .cs-button:before {
+    /* left line */
+    content: "";
+    width: 0.5rem;
+    height: 0.125rem;
+    background-color: var(--headerColor);
+    opacity: 1;
+    border-radius: 50%;
+    position: absolute;
+    display: block;
+    top: 50%;
+    right: 1.5rem;
+    transform: rotate(45deg);
+    /* animate the transform from the left side of the x axis, and the center of the y */
+    transform-origin: left center;
+    transition: transform 0.5s;
+  }
+  #faq-993 .cs-button:after {
+    /* right line */
+    content: "";
+    width: 0.5rem;
+    height: 0.125rem;
+    background-color: var(--headerColor);
+    opacity: 1;
+    border-radius: 50%;
+    position: absolute;
+    display: block;
+    top: 50%;
+    right: 1.3125rem;
+    transform: rotate(-45deg);
+    /* animate the transform from the right side of the x axis, and the center of the y */
+    transform-origin: right center;
+    transition: transform 0.5s;
+  }
+  #faq-993 .cs-button-text {
+    width: 80%;
+    display: block;
+  }
+  #faq-993 .cs-item-p {
+    /* 14px - 16px */
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    line-height: 1.5em;
+    width: 90%;
+    height: 0;
+    margin: 0;
+    /* 16px - 24px */
+    padding: 0 clamp(1rem, 2vw, 1.5rem);
+    opacity: 0;
+    color: var(--bodyTextColor);
+    /* clips the text so it doesn't show up */
+    overflow: hidden;
+    transition: opacity 0.3s, padding-bottom 0.3s;
+  }
+  #faq-993 .cs-floater1,
+  #faq-993 .cs-floater2 {
+    display: none;
+  }
+  #faq-993 .cs-bubbles {
+    /* this scales the children inside of it down. They're all in ems so they pull from the parent font size for their value of em, in this case, the value of em is tied to the viewwidth size and stops growing when the font size is equal to 1em, which it pulls from the nearst parent with a declred font size (which is the html tag, and that tag is 16px by default) */
+    font-size: min(2.9vw, 0.9em);
+    position: relative;
+    z-index: -1;
+  }
+  #faq-993 .cs-bubbles1 {
+    width: 15.625em;
+    height: 15.625em;
+    right: -11.875rem;
+    /* changes to 172 at large desktop */
+    bottom: 0em;
+  }
+  #faq-993 .cs-bubbles1:before {
+    content: "";
+    width: 12.5em;
+    height: 12.5em;
+    background: var(--primary);
+    border: 1px solid #fff;
+    border-radius: 50%;
+    opacity: 1;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    animation-name: floatAnimation;
+    animation-duration: 7s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+  }
+  #faq-993 .cs-bubbles1:before:hover {
+    background: #000;
+  }
+  #faq-993 .cs-bubbles1:after {
+    content: "";
+    width: 9.375em;
+    height: 9.375em;
+    background: #000;
+    opacity: 0.8;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    bottom: 50px;
+    right: 100px;
+    z-index: -1;
+    animation-name: floatAnimation2;
+    animation-duration: 10s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+  }
+}
+/* Large Desktop - 1800px */
+@media only screen and (min-width: 112.5rem) {
+  #faq-993 .cs-floater1 {
+    width: 24.8125rem;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #faq-993 .cs-floater2 {
+    width: 20.125rem;
+    height: auto;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  #faq-993 .cs-bubbles1 {
+    bottom: 37.5em;
+  }
+  #faq-993 .cs-bubbles1:before {
+    width: 18.75em;
+    height: 18.75em;
+    top: 0;
+    left: 0;
+  }
+  #faq-993 .cs-bubbles1:after {
+    width: 15.625em;
+    height: 15.625em;
+    bottom: 145px;
+    right: 30px;
+  }
+}
+
+/*# sourceMappingURL=faq.css.map */

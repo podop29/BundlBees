@@ -7,11 +7,12 @@
   :root {
     --primary: #ffba19;
     --primaryLight: #ffd675;
-    --secondary: #001f3f;
-    --secondaryLight: #001f3f;
+    --secondary: #000000;
+    --secondaryLight: #000000;
     --headerColor: #1a1a1a;
     --bodyTextColor: #4e4b66;
     --bodyTextColorWhite: #fafbfc;
+    --bodyColor: #f6f1e6;
     /* 13px - 16px */
     --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
     /* 31px - 49px */
@@ -20,28 +21,37 @@
     /* 60px - 100px top and bottom */
     --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
   }
+  body {
+    background-color: var(--bodyColor);
+  }
   .cs-topper {
     font-size: var(--topperFontSize);
-    font-weight: 700;
     line-height: 1.2em;
     text-transform: uppercase;
+    text-align: inherit;
     letter-spacing: 0.1em;
-    color: var(--secondary);
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 0.25rem;
     display: block;
   }
   .cs-title {
     font-size: var(--headerFontSize);
     font-weight: 900;
     line-height: 1.2em;
-    margin: 0 auto 1rem;
+    text-align: inherit;
+    max-width: 43.75rem;
+    margin: 0 0 1rem 0;
     color: var(--headerColor);
     position: relative;
   }
   .cs-text {
     font-size: var(--bodyFontSize);
     line-height: 1.5em;
+    text-align: inherit;
     width: 100%;
-    margin: 0 auto;
+    max-width: 40.625rem;
+    margin: 0;
     color: var(--bodyTextColor);
   }
   .cs-button-solid {
@@ -52,7 +62,6 @@
     text-transform: uppercase;
     text-decoration: none;
     width: auto;
-    height: 3.125rem;
     padding: 0 1.875rem;
     color: #000;
     background-color: var(--primary);
@@ -255,9 +264,8 @@
     /* prevents padding from affecting height and width */
     box-sizing: border-box;
     padding: 0.75rem 1rem;
-    background-color: #fff;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    position: fixed;
+    background-color: var(--bodyColor);
+    position: absolute;
     z-index: 10000;
   }
   #cs-navigation:before {
@@ -296,9 +304,10 @@
     align-items: center;
   }
   #cs-navigation .cs-logo {
-    width: 40%;
-    max-width: 9.125rem;
+    width: 80%;
+    max-width: 12.5rem;
     height: 100%;
+    max-height: 50px;
     margin: 0 auto 0 0;
     /* prevents padding from affecting height and width */
     box-sizing: border-box;
@@ -472,25 +481,6 @@
   }
   #cs-navigation .cs-button-solid {
     display: none;
-  }
-}
-/* Dark Mode */
-@media only screen and (max-width: 63.9375rem) {
-  body.dark-mode #cs-navigation {
-    background-color: var(--dark);
-  }
-  body.dark-mode #cs-navigation .cs-logo {
-    /* makes it white */
-    filter: grayscale(1) brightness(1000%);
-  }
-  body.dark-mode #cs-navigation .cs-line {
-    background-color: #fff;
-  }
-  body.dark-mode #cs-navigation .cs-ul-wrapper {
-    background-color: var(--medium);
-  }
-  body.dark-mode #cs-navigation .cs-li-link {
-    color: var(--bodyTextColorWhite);
   }
 }
 /*-- -------------------------- -->
@@ -690,9 +680,8 @@
     /* prevents padding from affecting height and width */
     box-sizing: border-box;
     padding: 0 1rem;
-    background-color: #fff;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    position: fixed;
+    background-color: var(--bodyColor);
+    position: absolute;
     z-index: 10000;
   }
   #cs-navigation .cs-container {
@@ -708,11 +697,11 @@
     display: none;
   }
   #cs-navigation .cs-logo {
-    width: 18.4%;
-    max-width: 21.875rem;
-    height: 4.0625rem;
+    width: 50.4%;
+    max-width: 31.25rem;
+    height: 7.5rem;
     /* margin-right auto pushes everything away from it to the right */
-    margin: 0 auto 0 0;
+    margin: 10px auto 0 0;
     padding: 0;
     display: flex;
     justify-content: center;
@@ -722,6 +711,7 @@
   #cs-navigation .cs-logo img {
     width: 100%;
     height: 100%;
+    height: 300px;
     /* ensures the image never overflows the container. It stays contained within it's width and height and expands to fill it then stops once it reaches an edge */
     object-fit: contain;
   }
@@ -997,7 +987,15 @@
   #footer {
     font-size: min(4vw, 1.2em);
     padding: 5.25rem 0 1.25rem;
-    background: #1c1c1c;
+    background: var(--bodyColor);
+    position: absolute;
+    width: 100%;
+  }
+  #footer #back-to-top:hover {
+    cursor: pointer;
+  }
+  #footer .container {
+    text-align: center;
   }
   #footer .left-section {
     text-align: center;
@@ -1027,62 +1025,47 @@
     color: #fff;
     opacity: 0.9;
   }
-  #footer .right-section {
-    width: 96%;
-    max-width: 25.4375rem;
-    margin: auto;
-  }
-  #footer .right-section .lists {
+  #footer .lists {
     width: 96%;
     max-width: 19.1875rem;
     margin: auto;
-    display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin-top: 8px;
+    text-align: center;
+    color: #000;
   }
-  #footer .right-section .lists ul {
-    margin-top: 0;
-    margin-bottom: 0;
+  #footer .lists ul {
+    margin: 16px 0;
     padding: 0;
+    font-size: larger;
   }
-  #footer .right-section .lists ul:nth-of-type(3) {
-    margin-top: 3.125rem;
-  }
-  #footer .right-section .lists ul:nth-of-type(3) li {
-    margin-bottom: 1rem;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-  }
-  #footer .right-section .lists ul:nth-of-type(3) li:last-of-type {
-    margin-bottom: 0;
-  }
-  #footer .right-section .lists ul li {
+  #footer .lists ul li {
     font-size: 1.125rem;
     list-style: none;
     margin-bottom: 0.75rem;
     color: #fff;
     opacity: 0.9;
   }
-  #footer .right-section .lists ul li a {
+  #footer .lists ul li a {
     line-height: 1.1666666667em;
     text-decoration: none;
     color: #fff;
     transition: color 0.3s;
   }
-  #footer .right-section .lists ul li a:hover {
+  #footer .lists ul li a:hover {
     color: var(--primary);
   }
-  #footer .right-section .lists ul h2 {
+  #footer .lists ul h2 {
     font-size: 1.125rem;
     font-weight: bold;
     line-height: 1.1666666667em;
     text-transform: uppercase;
     margin-bottom: 2.3125rem;
-    color: #fff;
+    color: var(--primary);
     position: relative;
   }
-  #footer .right-section .lists ul h2:before {
+  #footer .lists ul h2:before {
     content: "";
     width: 6.0625rem;
     height: 0.125rem;
@@ -1093,11 +1076,11 @@
     bottom: -1rem;
     left: 0;
   }
-  #footer .right-section .buttons {
+  #footer .lists .buttons {
     display: flex;
     justify-content: center;
   }
-  #footer .right-section .cs-button-solid {
+  #footer .lists .cs-button-solid {
     width: 15.625rem;
     height: 3.3125rem;
     margin: 0;
@@ -1108,14 +1091,16 @@
     line-height: 2.25rem;
     text-align: center;
     width: 96%;
+    color: #000;
     margin: auto;
-    margin-top: 6.25rem;
-    color: #fff;
+    margin-top: 0;
+    padding-top: 20px;
+    position: relative;
   }
   #footer .credit a {
     font-size: 1rem;
     text-decoration: none;
-    color: var(--primary);
+    color: #000;
   }
   #footer .credit a:hover {
     text-decoration: underline;
@@ -1139,6 +1124,8 @@
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: nowrap;
+    text-align: center;
+    z-index: 100;
   }
   #footer .left-section {
     text-align: left;
@@ -1154,27 +1141,23 @@
     text-align: left;
     margin-left: 0;
   }
-  #footer .right-section {
-    width: 38.0625rem;
-    max-width: none;
-    margin: 0;
-  }
-  #footer .right-section .lists {
-    width: 96%;
+  #footer .lists {
+    width: 50%;
     max-width: 48.0625rem;
     max-width: initial;
     margin: 0;
+    display: flex;
+    justify-content: center;
+    margin-left: 10%;
+    color: #fff;
   }
-  #footer .right-section .lists ul:nth-of-type(3) {
-    margin-top: 0;
+  #footer .lists ul {
+    margin: auto auto;
   }
-  #footer .right-section .lists ul:nth-of-type(3) li:first-of-type {
-    margin-bottom: 0;
-  }
-  #footer .right-section .lists ul li a {
+  #footer .lists ul li a {
     position: relative;
   }
-  #footer .right-section .lists ul li a:before {
+  #footer .lists ul li a:before {
     content: "";
     width: 0%;
     height: 0.125rem;
@@ -1186,21 +1169,89 @@
     left: 0;
     transition: width 0.3s;
   }
-  #footer .right-section .lists ul li a:hover:before {
+  #footer .lists ul li a:hover:before {
     width: 100%;
   }
-  #footer .right-section .buttons {
+  #footer .buttons {
     justify-content: flex-start;
+  }
+  #footer .credit {
+    color: #fff;
+  }
+  #footer .credit a {
+    color: #fff;
   }
   #footer .credit .copyright {
     display: inline-block;
   }
 }
-/* Dark Mode */
+/* HEADER BLOB */
+/* Mobile */
 @media only screen and (min-width: 0em) {
-  body.dark-mode #footer {
-    background: #061623;
+  .custom-shape-divider-top-1708992257 svg {
+    position: relative;
+    display: block;
+    width: calc(160% + 1.3px);
+    height: 148px;
   }
+}
+/* Small Desktop */
+@media only screen and (min-width: 64em) {
+  .custom-shape-divider-top-1708992257 svg {
+    position: relative;
+    display: block;
+    width: calc(160% + 1.3px);
+    height: 262px;
+  }
+}
+@media only screen and (min-width: 1300px) {
+  .custom-shape-divider-top-1708992257 svg {
+    position: relative;
+    display: block;
+    width: calc(146% + 1.3px);
+    height: 282px;
+  }
+}
+.custom-shape-divider-top-1708992257 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1708992257 .shape-fill {
+  fill: #FFBA19;
+}
+
+@media only screen and (min-width: 1300px) {
+  .custom-shape-divider-bottom-1709170770 svg {
+    position: relative;
+    display: none;
+    width: calc(146% + 1.3px);
+    height: 282px;
+  }
+}
+@media only screen and (min-width: 64em) {
+  .custom-shape-divider-bottom-1709170770 svg {
+    position: relative;
+    display: block;
+    width: calc(191% + 1.3px);
+    height: 400px;
+  }
+}
+.custom-shape-divider-bottom-1709170770 {
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+  bottom: 0;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1709170770 .shape-fill {
+  fill: var(--primary);
 }
 
 /*# sourceMappingURL=root.css.map */

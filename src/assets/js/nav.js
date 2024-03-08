@@ -2,6 +2,11 @@
 var CSbody = document.querySelector('body');
 const CSnavbarMenu = document.querySelector('#cs-navigation');
 const CShamburgerMenu = document.querySelector('#cs-navigation .cs-toggle');
+const upArrow = document.querySelector('#back-to-top');
+
+upArrow.addEventListener('click', ()=>{
+	window.scrollTo({ top: 0, behavior: 'smooth' });
+})
 
 CShamburgerMenu.addEventListener('click', function () {
 	CShamburgerMenu.classList.toggle('cs-active');
@@ -31,3 +36,17 @@ for (const item of dropDowns) {
 	};
 	item.addEventListener('click', onClick);
 }
+
+
+
+
+
+//faq
+const faqItems = Array.from(document.querySelectorAll('.cs-faq-item'));
+        for (const item of faqItems) {
+            const onClick = () => {
+            item.classList.toggle('active')
+        }
+        item.addEventListener('click', onClick)
+        }
+                                

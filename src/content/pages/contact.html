@@ -1,8 +1,11 @@
 ---
-title: 'Contact'
+title: 'Contact Us'
 description: 'Meta description for the page'
 preloadImg: '/assets/images/cabinets2.jpg'
-permalink: 'contact/'
+permalink: 'Contact-Us/'
+eleventyNavigation:
+    key: Contact Us
+    order: 200
 ---
 
 {% extends "layouts/base.html" %}
@@ -13,83 +16,77 @@ permalink: 'contact/'
 
 {% block body %}
 
-    <!-- ============================================ -->
-    <!--                    LANDING                   -->
-    <!-- ============================================ -->
+<!-- ============================================ -->
+<!--                   Contact                    -->
+<!-- ============================================ -->
 
-    <section id="int-hero">
-        <h1 id="home-h">Contact Us</h1>
-        <picture>
-            <source media="(max-width: 600px)" srcset="/assets/images/cabinets2-m.jpg">
-            <source media="(min-width: 601px)" srcset="/assets/images/cabinets2.jpg">
-            <img aria-hidden="true" decoding="async" src="/assets/images/cabinets2.jpg" alt="kitchen cabinets" loading="eager" width="2500" height="1667">
-        </picture>
-    </section>
-
-    <!-- ============================================ -->
-    <!--                Contact Form                  -->
-    <!-- ============================================ -->
-
-    <section id="cs-contact">
-        <div class="cs-container">
-            <form id="cs-form" name="Contact Form" method="post">
-                <div class="cs-content">
-                    <span class="cs-topper">Contact</span>
-                    <h2 class="cs-title">Get in Touch</h2>
-                    <p class="cs-text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ridiculus elementum ullamcorper ipsum porttitor aliquam. Id magna urna ultrices odio pulvinar. Sed ut.
-                    </p>
-                </div>
-                <label>
-                    Name
-                    <input required type="text" id="name" name="name" placeholder="Name">
-                </label>
-                <label>
-                    Email
-                    <input required type="text" id="email" name="email" placeholder="Email">
-                </label>
-                <label>
-                    Phone
-                    <input required type="text" id="phone" name="phone" placeholder="Phone">
-                </label>
-                <label>
-                    How Did You Find Us
-                    <input type="text" id="find" name="find-us" placeholder="How did you find us?">
-                </label>
-                <label class="cs-label-message">
-                    Message
-                    <textarea required name="Message" id="message" placeholder="Write message..."></textarea>
-                </label>
-                <button class="cs-button-solid" type="submit">Submit Message</button>
-            </form>
-            <div class="cs-right-section">
-                <!--Email-->
-                <span class="cs-header">Email</span>
-                <a class="cs-link" href="mailto:{{client.email}}">{{client.email}}</a>
-                <!--Phone-->
-                <span class="cs-header">Phone</span>
-                <a class="cs-link" href="tel:{{client.phoneForTel}}">{{client.phoneFormatted}}</a>
-                <!--Address-->
-                <span class="cs-header">Address</span>
-                <a class="cs-link" href="{{client.address.mapLink}}">
-                    {{client.address.lineOne}},
-                    <br />
-                    {{client.address.lineTwo}},
-                    <br />
-                    <span class="cs-block">
-                        {{client.address.city}}
-                        {{client.address.state}}
-                        {{client.address.zip}}
-                    </span>
-                </a>
-
-                <!-- Background Image-->
-                <picture class="cs-bg-picture">
-                    <source media="(min-width: 601px)" srcset="/assets/images/skyscraper.jpg">
-                    <img aria-hidden="true" decoding="async" src="/assets/images/skyscraper.jpg" alt="building" loading="lazy" width="2500" height="1667">
-                </picture>
-
-            </div>
+<section id="contact-1150">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Contact Us</span>
+            <h2 class="cs-title">We Love to Hear from Our Happy Customers</h2>
         </div>
-    </section>
+        <div class="cs-contact-group">
+            <picture class="cs-picture">
+                <!--Mobile Image-->
+               
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400.89 525.64" id="CustomerSupport"><g data-name="Layer 2" fill="#000000" class="color000000 svgShape"><g data-name="solid III" fill="#000000" class="color000000 svgShape"><g data-name="contact us" fill="#000000" class="color000000 svgShape"><g fill="#000000" class="color000000 svgShape"><rect width="573.15" height="357.22" x="471.56" y="164.43" fill="#ffbf66" stroke="#ffba19" stroke-linecap="round" stroke-linejoin="round" stroke-width="6" rx="17.78" class="colorffffff svgShape colorStroke2e186a svgStroke"></rect><path fill="none" stroke="#ffba19" stroke-linecap="round" stroke-linejoin="round" stroke-width="6" d="m478.45 168.17 269.21 209.38a16.86 16.86 0 0 0 21 0l269.21-209.38" class="colorStroke2e186a svgStroke"></path><path fill="#ffbf66" stroke="#ffba19" stroke-linecap="round" stroke-linejoin="round" stroke-width="6" d="M477.72 455.33 641.96 295.6M875.77 295.6l167.39 162.79" class="colorffffff svgShape colorStroke2e186a svgStroke"></path></g><g fill="#000000" class="color000000 svgShape"><g data-name="soft parts" fill="#000000" class="color000000 svgShape"><path fill="#ffbf66" stroke="#ffba19" stroke-linecap="round" stroke-linejoin="round" stroke-width="6" d="m323 288.57 64.32-11.87s-29-73.23 24.46-159.87S559.91 60.22 615.67 99.4c0 0-66.38-107.63-149.66-84.63S342.1 88.89 325.76 176.59 323 288.57 323 288.57Z" data-name="soft inside" class="colorffffff svgShape colorStroke2e186a svgStroke"></path><g data-name="soft part II" fill="#000000" class="color000000 svgShape"><path fill="#ffbf66" stroke="#ffba19" stroke-linecap="round" stroke-linejoin="round" stroke-width="6" d="M287.38 343c-2.81-26.76 9.44-52.88 55.28-67.87s92.08 17.13 94.73 26.93 67.34 184.3-4.26 201.53-129.69-42.75-135.63-75.07S287.38 343 287.38 343Z" class="colorffffff svgShape colorStroke2e186a svgStroke"></path><path fill="none" stroke="#ffba19" stroke-linecap="round" stroke-linejoin="round" stroke-width="6" d="M417.9 352.34c-4-11.73-29.37-43.65-52-23.36s-6 102.55 40.6 94.33 11.4-70.97 11.4-70.97Z" class="colorStroke2e186a svgStroke"></path></g><path fill="#ffbf66" stroke="#ffba19" stroke-linecap="round" stroke-linejoin="round" stroke-width="6" d="M622 256.46c-24.27-13.81-79.81-31.83-111.07-19.63s-89.15 42.22-103 171S547 516.14 547 516.14Z" data-name="soft part" class="colorffffff svgShape colorStroke2e186a svgStroke"></path></g><path fill="#d0a95c" d="M656.86 274.69c1.91-10.12 6.39-32.95 6.39-32.95 5.89-28.93 11.37-56 10.25-83.54-2.29-56.61-38.27-106.77-77.68-127.65C510.32-14.76 455 3.73 455 3.73c-183.36 62-150.08 264-146.12 284.89-36.81 17.88-52.48 42.62-49.71 77.23 2.14 18.88-.36 111.12 46.36 137.3s93.41 18.68 124 1.28c-69.73 14.23-119.82-50.1-125.66-81.88-5.93-32.32-10-80.15-10-80.15-2.27-21.58 7.36-44.43 39.52-60.7l-.16-1.6h.06c-.06-.33-.11-.67-.16-1l-.17-1.65-.07.08C328.4 247.8 321.1 170 357.65 108.1c46.84-79.37 100.84-83.93 100.84-83.93C561.29 9 599 120.89 596.67 181.78c-2.11 54.68-32.8 67.68-39 69.77a40.08 40.08 0 0 0-22.5 4c-22.48 4-59.2 53.95-81 104 0 .14.08.29.11.44l-.53.52c-10.21 23.64-17 47.22-17.41 65.86a58 58 0 0 0 16.4 55.25l9.69-2a38.59 38.59 0 0 1-3.58 7.09 58.45 58.45 0 0 0 8.13 4.9l50 24.73A44.08 44.08 0 0 0 576.14 496l1.48-3c23 3 53.27-20.16 71.89-56.89 19.51-38.49 19.44-78.46.93-93.86 1.2-11.37.8-28.56 3.87-51.64q1.17-8.1 2.55-15.92Z" class="colorfe7624 svgShape"></path><g fill="#000000" class="color000000 svgShape"><path fill="#d0a95c" d="M569 470c-84.33 19.69-233.17 15.62-395.25-13.4l-1 2.81a25.57 25.57 0 0 0-18.56-16.54L111 433.21a25.59 25.59 0 0 0-30.56 19.38l-.44 2.14a25.58 25.58 0 0 0 19.37 30.56l43.16 9.71a25.48 25.48 0 0 0 19.47-3.5l-.54 1.6s158.34 47.57 387.7 27.67c-.01 0 20.14-48.26 19.84-50.77Z" data-name="shape" class="colorfe7624 svgShape"></path><path fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="6" d="M443.73 479.3s87 11.82 112-22.69c35.34-6.33 23.56 42.66 23.56 42.66M637.22 339s-47-22.81-81.46 117.62" data-name="line" class="colorStrokeffffff svgStroke"></path></g></g><g fill="#000000" class="color000000 svgShape"><path fill="#d19621" d="m1230.72 501.09-46.67 19-502.34-1.33c-4.35 0-7.86-5.28-7.84-11.76l.06-20.66c0-6.48 3.55-11.72 7.89-11.71l502.35 1.37 46.57 19.24c2.01.76 2 5.03-.02 5.85Z" class="color5d21d1 svgShape"></path><path fill="none" stroke="#ffba19" stroke-linecap="round" stroke-linejoin="round" stroke-width="6" d="m691.64 520.9.15-62.87 123.53 2.54" class="colorStroke2e186a svgStroke"></path><path fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="6" d="M866.68 495.93h-113.2" class="colorStrokeffffff svgStroke"></path></g><path fill="#ffbf66" stroke="#ffba19" stroke-linecap="round" stroke-linejoin="round" stroke-width="6" d="M3 522.55h1394.89" data-name="line" class="colorffffff svgShape colorStroke2e186a svgStroke"></path></g></g></g></svg>
+            </picture>
+            <p class="cs-contact-text">
+                Our customer service team is available Monday through Friday, from 9:00 AM to 5:00 PM (EST). We'll do our best to respond to your inquiry as soon as possible. Thank you for choosing BundlBees!
+            </p>
+            <ul class="cs-ul">
+                <li class="cs-li">
+                    <picture class="cs-icon-wrapper">
+                        <img aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mech-phone.svg" alt="phone icon" class="cs-icon" width="40" height="40" decoding="async">
+                    </picture>
+                    <div class="cs-flex-group">
+                        <span class="cs-header">Phone</span>
+                        <a href="tel:888-4565-789
+                        " class="cs-link">+1 (111) 111 1111
+                        </a>
+                    </div>
+                </li>
+                <li class="cs-li">
+                    <picture class="cs-icon-wrapper">
+                        <img aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mech-pin.svg" alt="address icon" class="cs-icon" width="40" height="40" decoding="async">
+                    </picture>
+                    <div class="cs-flex-group">
+                        <span class="cs-header">Address</span>
+                        <a href="" class="cs-link">yo mama house Drive, Mi 1120</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!--Form-->
+        <form class="cs-form" id="cs-form-1150" name="Contact Form" method="post">
+            <label class="cs-label">
+                Name
+                <input class="cs-input" required type="text" id="name-1150" name="name" placeholder="Name">
+            </label>
+            <label class="cs-label cs-email">
+                Email
+                <input class="cs-input" required type="email" id="email-1150" name="email" placeholder="Email">
+            </label>
+            <label class="cs-label cs-phone">
+                Phone
+                <input class="cs-input" required type="number" id="phone-1150" name="phone" placeholder="Phone">
+            </label>
+            <label class="cs-label">
+                Message
+                <textarea class="cs-input cs-textarea" required name="Message" id="message-1150" placeholder="Write message..."></textarea>
+            </label>
+            <button class="cs-button-solid cs-submit" type="submit">Send Email</button>
+        </form>
+        <!--Bounce Graphic-->
+        <svg class="cs-graphic cs-graphic1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" id="Flare"><path fill="none" d="M0 0h48v48H0z"></path><path d="M14 22H2v4h12v-4zm4.34-6.49-4.24-4.24-2.83 2.83 4.24 4.24 2.83-2.83zM26 2h-4v12h4V2zm10.73 12.1-2.83-2.83-4.24 4.24 2.83 2.83 4.24-4.24zM34 22v4h12v-4H34zm-10-4c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm5.66 14.49 4.24 4.24 2.83-2.83-4.24-4.24-2.83 2.83zM11.27 33.9l2.83 2.83 4.24-4.24-2.83-2.83-4.24 4.24zM22 46h4V34h-4v12z" fill="#ffba19" class="color000000 svgShape"></path></svg>
+        <!--Coin Graphic-->
+        <svg class="cs-graphic cs-graphic2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" id="call"><path d="M31.477 22.44c3.52 0 6.38 2.86 6.38 6.38 0 .55.45 1 1 1 .56 0 1-.45 1-1 0-4.62-3.76-8.38-8.38-8.38-.55 0-1 .44-1 1 0 .55.45 1 1 1zm0-7.58c7.69 0 13.95 6.26 13.95 13.96 0 .55.45 1 1 1 .56 0 1-.45 1-1 0-8.8-7.15-15.96-15.95-15.96-.55 0-1 .45-1 1 0 .56.45 1 1 1z" fill="#ffba19" class="color000000 svgShape"></path><path d="M31.477 7.29c11.87 0 21.52 9.66 21.52 21.53 0 .55.45 1 1 1 .56 0 1-.45 1-1 0-12.97-10.55-23.53-23.52-23.53-.55 0-1 .45-1 1 0 .56.45 1 1 1zm-9.9 16.75a4.526 4.526 0 0 0 .95-4.68l-3.46-9.16a4.512 4.512 0 0 0-4.21-2.92h-1.46c-1.19 0-2.36.49-3.2 1.34l-3.89 3.93c-.88.88-1.35 2.1-1.3 3.33.89 20.88 17.94 37.93 38.82 38.82.06.01.12.01.18.01 1.17 0 2.31-.47 3.15-1.31l3.94-3.89a4.57 4.57 0 0 0 1.33-3.2v-1.46c0-1.86-1.17-3.56-2.91-4.21l-9.17-3.46c-1.6-.6-3.44-.23-4.68.95l-1.53 1.45c-.85.81-2.15.92-3.1.28-5.55-3.74-9.36-8.6-11.13-11.16a2.52 2.52 0 0 1 .24-3.15l1.43-1.51z" fill="#ffba19" class="color000000 svgShape"></path></svg>
+    </div>
+</section>
+                                
+                                
+
+    {% include 'components/cta.html' %}
+
 {% endblock %}

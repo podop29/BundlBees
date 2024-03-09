@@ -1117,4 +1117,86 @@
 
 }
 
-                            
+             
+@media only screen and (min-width: 0rem) {
+
+    .hex {
+        position: absolute;
+        z-index: -100;
+        top: 120px;
+        display:flex;
+        --s: 80px;  /* size  */
+        --m: 2px;    /* margin */
+        --f: calc(var(--s) * 1.732 + 4 * var(--m) - 1px); 
+      }
+      
+      .hexcontainer {
+        font-size: 0; /* disable white space between inline block element */
+      }
+      .hexcontainer div:nth-child(odd) {
+       /*Dark*/
+       background: #f6edda;
+      }
+      .hexcontainer div {
+        width: var(--s);
+        margin: var(--m);
+        height: calc(var(--s) * 1.1547);
+        display: inline-block;
+        font-size:initial;
+        clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
+        margin-bottom: calc(var(--m) - var(--s) * 0.2885);
+        /*light*/
+        background: #fcf3df;
+      }
+    
+      
+      .hexcontainer::before {
+        content: "";
+        width: calc(var(--s) / 2 + var(--m));
+        float: left;
+        height: 100%; 
+        shape-outside: repeating-linear-gradient(#0000 0 calc(var(--f) - 3px), #000 0 var(--f));
+      }
+
+
+}
+@media only screen and (min-width: 64rem) {
+    .hex {
+        position: absolute;
+        z-index: -100;
+        top: 120px;
+        left:  60px;
+        display:flex;
+        --s: 200px;  /* size  */
+        --m: 4px;    /* margin */
+        --f: calc(var(--s) * 1.732 + 4 * var(--m) - 1px); 
+      }
+      
+      .hexcontainer {
+        font-size: 0; /* disable white space between inline block element */
+      }
+
+      .hexcontainer div {
+        width: var(--s);
+        margin: var(--m);
+        height: calc(var(--s) * 1.1547);
+        display: inline-block;
+        font-size:initial;
+        clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
+        margin-bottom: calc(var(--m) - var(--s) * 0.2885);
+
+      }
+    
+      
+      .hexcontainer::before {
+        content: "";
+        width: calc(var(--s) / 2 + var(--m));
+        float: left;
+        height: 100%; 
+        shape-outside: repeating-linear-gradient(#0000 0 calc(var(--f) - 3px), #000 0 var(--f));
+      }
+
+
+}
+
+

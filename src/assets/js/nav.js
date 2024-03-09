@@ -50,3 +50,39 @@ const faqItems = Array.from(document.querySelectorAll('.cs-faq-item'));
         item.addEventListener('click', onClick)
         }
                                 
+
+//Hex
+
+document.addEventListener(("DOMContentLoaded"), ()=>{
+	const hex = document.getElementById("hex");
+	const main = document.getElementById("main");
+	if(!hex || !main)
+		return;
+
+	const mainHeight = main.clientHeight;
+	const mainWidth = main.clientWidth;
+
+	const footer = document.getElementById("footer");
+	if(!footer)
+		return;
+	const footerHeight = footer.clientHeight;
+
+	const fullHeight = footerHeight + mainHeight;
+
+	const hexHeight = getComputedStyle(hex).getPropertyValue("--s").replaceAll("px","");
+
+	const rowsNeeded = fullHeight / hexHeight;
+
+	const perRow =( mainWidth / hexHeight) - 1;
+	const hexNeeded = (perRow * rowsNeeded / 1.4);
+	const hexcontainer =  document.getElementById("hexcontainer");
+
+	if(!hexNeeded || !hexcontainer)
+		return;
+
+	for(let i = 0; i < hexNeeded; i++){
+		var div = document.createElement('div');
+		hexcontainer.append(div);
+	}
+
+})

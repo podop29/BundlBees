@@ -1149,13 +1149,14 @@
     display: flex;
     justify-content: center;
     margin-left: 10%;
-    color: #fff;
+    color: #000;
   }
   #footer .lists ul {
     margin: auto auto;
   }
   #footer .lists ul li a {
     position: relative;
+    text-decoration: none;
   }
   #footer .lists ul li a:before {
     content: "";

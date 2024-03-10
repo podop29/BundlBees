@@ -1184,10 +1184,13 @@
         font-size:initial;
         clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
         margin-bottom: calc(var(--m) - var(--s) * 0.2885);
-
+        animation-name: glowAnimation;
+        animation-duration: 7s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
       }
-    
-      
+
       .hexcontainer::before {
         content: "";
         width: calc(var(--s) / 2 + var(--m));
@@ -1196,6 +1199,19 @@
         shape-outside: repeating-linear-gradient(#0000 0 calc(var(--f) - 3px), #000 0 var(--f));
       }
 
+      @keyframes glowAnimation {
+        0% {
+            box-shadow:  none;
+
+        }
+        50% {
+            box-shadow:  inset 0px 1px 10px 2px white;
+
+        }
+        100% {
+            box-shadow:  none;
+        }
+    }
 
 }
 

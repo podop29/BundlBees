@@ -1365,14 +1365,14 @@
             display: flex;
             justify-content: center;
             margin-left: 10%;
-            color: #fff;
-
+            color: #000;
             ul {
                 margin: auto auto;
 
                 li {
                     a {
                         position: relative;
+                        text-decoration: none;
 
                         &:before {
                             content: "";

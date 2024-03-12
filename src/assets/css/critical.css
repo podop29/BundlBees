@@ -616,7 +616,7 @@
     background-color: var(--bodyColor);
   }
   #collection-1570 .cs-item:hover .cs-picture img {
-    transform: scale(1.05);
+    transform: scale(1.65);
   }
   #collection-1570 .cs-link {
     text-decoration: none;
@@ -639,6 +639,7 @@
     height: 100%;
     object-fit: contain;
     transition: transform 0.3s;
+    transform: scale(1.8);
   }
   #collection-1570 .cs-offer {
     font-size: 0.8125rem;
@@ -974,6 +975,11 @@
   .hexcontainer div:nth-child(odd) {
     /*Dark*/
     background: #f6edda;
+    animation-name: darkToLight;
+    animation-duration: 7s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
   }
   .hexcontainer div {
     width: var(--s);
@@ -985,6 +991,11 @@
     margin-bottom: calc(var(--m) - var(--s) * 0.2885);
     /*light*/
     background: #fcf3df;
+    animation-name: lightToDark;
+    animation-duration: 7s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
   }
   .hexcontainer::before {
     content: "";
@@ -1016,11 +1027,6 @@
     font-size: initial;
     clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
     margin-bottom: calc(var(--m) - var(--s) * 0.2885);
-    animation-name: glowAnimation;
-    animation-duration: 7s;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
-    animation-iteration-count: infinite;
   }
   .hexcontainer::before {
     content: "";
@@ -1029,15 +1035,26 @@
     height: 100%;
     shape-outside: repeating-linear-gradient(rgba(0, 0, 0, 0) 0 calc(var(--f) - 3px), #000 0 var(--f));
   }
-  @keyframes glowAnimation {
+  @keyframes lightToDark {
     0% {
-      box-shadow: none;
+      background: #fcf3df;
     }
     50% {
-      box-shadow: inset 0px 1px 10px 2px white;
+      background: #f6edda;
     }
     100% {
-      box-shadow: none;
+      background: #fcf3df;
+    }
+  }
+  @keyframes lightToDark {
+    0% {
+      background: #f6edda;
+    }
+    50% {
+      background: #fcf3df;
+    }
+    100% {
+      background: #f6edda;
     }
   }
 }

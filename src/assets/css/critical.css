@@ -953,6 +953,24 @@
     margin-right: auto;
     height: 200px;
   }
+  #floating-bee-container .hexcontainer div:nth-child(odd) {
+    /*Dark*/
+    background: #f6edda;
+    animation-name: darkToLight;
+    animation-duration: 7s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+  }
+  #floating-bee-container .hexcontainer div {
+    /*light*/
+    background: #fcf3df;
+    animation-name: lightToDark;
+    animation-duration: 7s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+  }
 }
 @media only screen and (min-width: 48rem) {
   #floating-bee-container .floating-bee {
@@ -972,15 +990,6 @@
   .hexcontainer {
     font-size: 0; /* disable white space between inline block element */
   }
-  .hexcontainer div:nth-child(odd) {
-    /*Dark*/
-    background: #f6edda;
-    animation-name: darkToLight;
-    animation-duration: 7s;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
-    animation-iteration-count: infinite;
-  }
   .hexcontainer div {
     width: var(--s);
     margin: var(--m);
@@ -989,13 +998,6 @@
     font-size: initial;
     clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
     margin-bottom: calc(var(--m) - var(--s) * 0.2885);
-    /*light*/
-    background: #fcf3df;
-    animation-name: lightToDark;
-    animation-duration: 7s;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
-    animation-iteration-count: infinite;
   }
   .hexcontainer::before {
     content: "";

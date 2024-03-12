@@ -1104,7 +1104,27 @@
             height: 200px;
         }
         
+        .hexcontainer div:nth-child(odd) {
+            /*Dark*/
+            background: #f6edda;
+            animation-name: darkToLight;
+            animation-duration: 7s;
+            animation-timing-function: ease-in-out;
+            animation-fill-mode: forwards;
+            animation-iteration-count: infinite;
+           }
             
+        .hexcontainer div {
+                        /*light*/
+        background: #fcf3df;
+        animation-name: lightToDark;
+        animation-duration: 7s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+        }
+
+ 
     }
 }
 
@@ -1134,15 +1154,7 @@
       .hexcontainer {
         font-size: 0; /* disable white space between inline block element */
       }
-      .hexcontainer div:nth-child(odd) {
-       /*Dark*/
-       background: #f6edda;
-       animation-name: darkToLight;
-       animation-duration: 7s;
-       animation-timing-function: ease-in-out;
-       animation-fill-mode: forwards;
-       animation-iteration-count: infinite;
-      }
+
       .hexcontainer div {
         width: var(--s);
         margin: var(--m);
@@ -1151,13 +1163,7 @@
         font-size:initial;
         clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
         margin-bottom: calc(var(--m) - var(--s) * 0.2885);
-        /*light*/
-        background: #fcf3df;
-        animation-name: lightToDark;
-        animation-duration: 7s;
-        animation-timing-function: ease-in-out;
-        animation-fill-mode: forwards;
-        animation-iteration-count: infinite;
+
       }
     
       

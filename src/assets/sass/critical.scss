@@ -1154,8 +1154,13 @@
       .hexcontainer {
         font-size: 0; /* disable white space between inline block element */
       }
+      .hexcontainer div:nth-child(odd) {
+        background: #f6edda;
 
+      }
       .hexcontainer div {
+        /*light*/
+        background: #fcf3df;
         width: var(--s);
         margin: var(--m);
         height: calc(var(--s) * 1.1547);

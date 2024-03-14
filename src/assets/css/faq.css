@@ -29,6 +29,7 @@
     padding: clamp(6.75rem, 9.82vw, 11.25rem) 1rem;
     padding-bottom: 0;
     position: relative;
+    overflow: hidden;
   }
   #faq-993 .cs-container {
     width: 100%;

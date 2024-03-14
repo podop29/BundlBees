@@ -9,6 +9,7 @@
         background-color: var(-bodyColor);
         position: relative;
         z-index: 1;
+        overflow: hidden;
 
         .cs-container {
             width: 100%;

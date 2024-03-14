@@ -122,13 +122,14 @@
     position: relative;
   }
   #sbs-1431 .cs-person {
-    height: 100%;
+    height: 85%;
     width: auto;
     /* allows text align to move it left or right */
     display: inline-flex;
     align-items: flex-end;
     justify-content: center;
     position: relative;
+    bottom: 90px;
   }
   #sbs-1431 .cs-person img {
     width: auto;

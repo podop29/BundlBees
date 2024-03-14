@@ -80,9 +80,15 @@ document.addEventListener(("DOMContentLoaded"), ()=>{
 	if(!hexNeeded || !hexcontainer)
 		return;
 
-	for(let i = 0; i < hexNeeded; i++){
+	let i = 0;
+	for(i = 0; i < hexNeeded; i++){
 		var div = document.createElement('div');
 		hexcontainer.append(div);
+	}
+	while((i / Math.ceil(perRow)) % 1 != 0){
+		var div = document.createElement('div');
+		hexcontainer.append(div);
+		i++;
 	}
 
 })

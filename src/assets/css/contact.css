@@ -8,6 +8,7 @@
     background-color: var(-bodyColor);
     position: relative;
     z-index: 1;
+    overflow: hidden;
   }
   #contact-1150 .cs-container {
     width: 100%;

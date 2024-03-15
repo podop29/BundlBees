@@ -534,6 +534,9 @@
     padding: var(--sectionPadding);
     padding-bottom: 0px;
   }
+  #collection-1570 .oos {
+    color: red;
+  }
   #collection-1570 .cs-container {
     width: 100%;
     max-width: 92.5rem;

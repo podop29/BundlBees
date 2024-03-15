@@ -619,6 +619,9 @@
         padding: var(--sectionPadding);
         padding-bottom: 0px;
 
+        .oos{
+            color: red;
+        }
         .cs-container {
             width: 100%;
             max-width: calc(1480 / 16 * 1rem);

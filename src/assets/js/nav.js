@@ -54,6 +54,22 @@ const faqItems = Array.from(document.querySelectorAll('.cs-faq-item'));
 //Hex
 
 document.addEventListener(("DOMContentLoaded"), ()=>{
+
+	renderHex();
+})
+addEventListener("resize", (event) => {
+	resetHex();
+	renderHex();
+});
+
+function resetHex(){
+	const hexcontainer =  document.getElementById("hexcontainer");
+	if(!hexcontainer)
+		return;
+	hexcontainer.innerHTML = "";
+}
+
+function renderHex(){
 	const hex = document.getElementById("hex");
 	const main = document.getElementById("main");
 	if(!hex || !main)
@@ -70,6 +86,8 @@ document.addEventListener(("DOMContentLoaded"), ()=>{
 	const fullHeight = footerHeight + mainHeight;
 
 	const hexHeight = getComputedStyle(hex).getPropertyValue("--s").replaceAll("px","");
+	if(hexHeight == "")
+		return;
 
 	const rowsNeeded = fullHeight / hexHeight;
 
@@ -85,10 +103,9 @@ document.addEventListener(("DOMContentLoaded"), ()=>{
 		var div = document.createElement('div');
 		hexcontainer.append(div);
 	}
-	while((i / Math.ceil(perRow)) % 1 != 0){
+	while((i / Math.round(perRow)) % 1 != 0){
 		var div = document.createElement('div');
 		hexcontainer.append(div);
 		i++;
 	}
-
-})
+}

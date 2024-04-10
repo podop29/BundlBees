@@ -54,11 +54,16 @@ module.exports = function (eleventyConfig) {
     // FILTERS - Modify data in template files at build time
     // Converts dates from JSDate format (Fri Dec 02 18:00:00 GMT-0600) to a locale format. More info in docs - https://moment.github.io/luxon/api-docs/index.html#datetime
     eleventyConfig.addFilter("postDate", filterPostDate);
+
     // END FILTERS
 
     // SHORTCODES - Output data using JS at build-time
     // Gets the current year, which can be outputted with {% year %}. Used for the footer copyright. Updates with every build.
     eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
+
+    eleventyConfig.addCollection('products', function(collectionApi){
+        return collectionApi.getFilteredByGlob('src/assets/products/**.*.md');
+    })
     // END SHORTCODES
 
     return {

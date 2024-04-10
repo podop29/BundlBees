@@ -132,107 +132,24 @@ eleventyNavigation:
             <a href="" class="cs-button-solid">View All Boxes</a>
         </div>
         <div class="cs-card-group">
-            <div class="cs-item">
-                <a href="" class="cs-link">
+            {%- for product in collections.product -%}
+            <div class="cs-item cs-product">
+                <a  href="{{product.url}}" class="cs-link">
                     <div class="cs-image-group">
                         <picture class="cs-picture">
                             <!--Mobile Image-->
-                            <source media="(max-width: 600px)" srcset="/assets/images/snackboxes/Cliff1.jpg">
+                            <source media="(max-width: 600px)" srcset="{{product.data.imageUrl}}">
                             <!--Tablet and above Image-->
-                            <source media="(min-width: 601px)" srcset="/assets/images/snackboxes/Cliff1.jpg">
-                            <img loading="lazy" decoding="async" src="/assets/images/snackboxes/Cliff1.jpg" alt="alpaca crewneck" width="1280" height="568">
-                        </picture>
-
-                    </div>
-                    <div class="cs-details">
-                        <span class="cs-tags">Featured Item </span>
-                        <h3 class="cs-product">Variety Cliff Bar Snack pack</h3>
-                        <div class="cs-wrapper">
-                            <div class="cs-flex">
-                                <span class="cs-price">$29.99</span>
-    
-                                <!--Stars-->
-                                <img class="cs-stars" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/stars.svg" decoding="async" alt="quote icon" width="92" height="16">
-                            </div>
-                            <div class="oos">
-                                Out Of Stock
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="cs-item">
-                <a href="" class="cs-link">
-                    <div class="cs-image-group">
-                        <picture class="cs-picture">
-                            <!--Mobile Image-->
-                            <source media="(max-width: 600px)" srcset="/assets/images/snackboxes/ily.jpg">
-                            <!--Tablet and above Image-->
-                            <source media="(min-width: 601px)" srcset="/assets/images/snackboxes/ily.jpg">
-                            <img loading="lazy" decoding="async" src="/assets/images/snackboxes/ily.jpg" alt="alpaca crewneck" width="1280" height="568">
-                        </picture>
-
-                    </div>
-                    <div class="cs-details">
-                        <span class="cs-tags">Featured Item </span>
-                        <h3 class="cs-product">Illy Ground Coffee variety pack </h3>
-                        <div class="cs-wrapper">
-                            <div class="cs-flex">
-                                <span class="cs-price">$49.99</span>
-                                <!--Stars-->
-                                <img class="cs-stars" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/stars.svg" decoding="async" alt="quote icon" width="92" height="16">
-                            </div>
-                            <div class="oos">
-                                Out Of Stock
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="cs-item">
-                <a href="" class="cs-link">
-                    <div class="cs-image-group">
-                        <picture class="cs-picture">
-                            <!--Mobile Image-->
-                            <source media="(max-width: 600px)" srcset="/assets/images/snackboxes/lacroi.jpg">
-                            <!--Tablet and above Image-->
-                            <source media="(min-width: 601px)" srcset="/assets/images/snackboxes/lacroi.jpg">
-                            <img loading="lazy" decoding="async" src="/assets/images/snackboxes/lacroi.jpg" alt="hoodie" width="1280" height="568">
-                        </picture>
-                    </div>
-                    <div class="cs-details">
-                        <span class="cs-tags">Featured Item</span>
-                        <h3 class="cs-product">LaCroix Variety Pack (24 pack)</h3>
-                        <div class="cs-wrapper">
-                            <div class="cs-flex">
-                                <span class="cs-price">$41.99</span>     
-                                <!--Stars-->
-                                <img class="cs-stars" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/stars.svg" decoding="async" alt="five star reviews" width="92" height="16">
-                            </div>
-                            <div class="oos">
-                                Out Of Stock
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="cs-item">
-                <a href="" class="cs-link">
-                    <div class="cs-image-group">
-                        <picture class="cs-picture">
-                            <!--Mobile Image-->
-                            <source media="(max-width: 600px)" srcset="/assets/images/snackboxes/PeakOatmeal.jpg">
-                            <!--Tablet and above Image-->
-                            <source media="(min-width: 601px)" srcset="/assets/images/snackboxes/PeakOatmeal.jpg">
-                            <img loading="lazy" decoding="async" src="/assets/images/snackboxes/PeakOatmeal.jpg" alt="blue sweater" width="1280" height="568">
+                            <source media="(min-width: 601px)" srcset="{{product.data.imageUrl}}">
+                            <img loading="lazy" decoding="async" src="{{product.data.imageUrl}}" alt="{{product.data.imageAlt}}" width="1280" height="568">
                         </picture>
                     </div>
                     <div class="cs-details">
                         <span class="cs-tags">Featured Item </span>
-                        <h3 class="cs-product">PEAK Oatmeal Variety Pack</h3>
+                        <h3 class="cs-product">{{product.data.name}}</h3>
                         <div class="cs-wrapper">
                             <div class="cs-flex">
-                                <span class="cs-price">$34.49</span>
+                                <span class="cs-price">{{product.data.price}}</span>
                                 <!--Stars-->
                                 <img class="cs-stars" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/stars.svg" decoding="async" alt="quote icon" width="92" height="16">
                             </div>
@@ -246,6 +163,7 @@ eleventyNavigation:
                     </div>
                 </a>
             </div>
+            {% endfor %}
         </div>
     </div>
     <div class="cs-bubbles cs-bubbles1" aria-hidden="true"></div>

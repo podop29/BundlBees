@@ -39,8 +39,6 @@ for (const item of dropDowns) {
 
 
 
-
-
 //faq
 const faqItems = Array.from(document.querySelectorAll('.cs-faq-item'));
         for (const item of faqItems) {

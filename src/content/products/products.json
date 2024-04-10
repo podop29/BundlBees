@@ -1,0 +1,5 @@
+{
+	"layout": "layouts/product.html",
+	"tags": "product",
+	"permalink": "product/{{title}}/index.html"
+}

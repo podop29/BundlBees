@@ -1,0 +1,52 @@
+---
+preloadCSS: '/assets/css/product.css'
+eleventyComputed:
+    title: '{{ title }}'
+    description: '{{ description }}'
+    preloadImg: '{{ imageUrl }}'
+    permalink: '/blog/{{ title | slug }}/index.html'
+---
+
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/product.css">
+{% endblock %}
+
+{% block body %}
+<!-- ============================================ -->
+<!--                 Collection                   -->
+<!-- ============================================ -->
+
+<section id="collection-1596">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-tag">Only {{price}}</span>
+            <h2 class="cs-title">Featured Products</h2>
+            <h3 class="cs-product-name">{{name}}</h3>
+            <span class="cs-price">{{price}}</span>
+
+            <p class="cs-text">
+               {{description}}
+            </p>
+            <a  class="cs-button-solid">SOLD OUT</a>
+        </div>
+        <div class="cs-card-group">
+            <li class="cs-item">
+                <a href="" class="cs-link">
+                    <picture class="cs-picture">
+                        <!--Mobile Image-->
+                        <source media="(max-width: 600px)" srcset="{{imageUrl}}">
+                        <!--Tablet and above Image-->
+                        <source media="(min-width: 601px)" srcset="{{imageUrl}}">
+                        <img loading="lazy" decoding="async" src="{{imageUrl}}" alt="{{imageUlt}}" width="1280" height="568">
+                    </picture>
+                </a>
+            </li>
+        </div>
+    </div>
+</section>
+                                
+
+{% endblock %}

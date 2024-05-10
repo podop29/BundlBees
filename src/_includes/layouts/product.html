@@ -34,15 +34,53 @@ eleventyComputed:
         </div>
         <div class="cs-card-group">
             <li class="cs-item">
-                <a href="" class="cs-link">
-                    <picture class="cs-picture">
-                        <!--Mobile Image-->
+
+
+
+                <section>
+                    <div class="containerw">
+                        <div class="carousel">
+      
+                            {%- for img in imageUrl -%}
+                            <input type="radio" checked="{{ 'checked' if loop.index == 0 }}" name="slides" id="slide-{{loop.index}}">
+                            {% endfor %}
+
+                            <ul class="carousel__slides">
+                                {%- for img in imageUrl -%}
+
+                                <li class="carousel__slide">
+                                    <figure>
+                                        <div>
+                                            <img src="{{img}}" alt="{{imageAlt}}">
+                                        </div>      
+                                    </figure>
+                                </li>
+
+                                {% endfor %}
+                            </ul>
+                      
+
+                            <ul class="carousel__thumbnails">
+
+                                {%- for img in imageUrl -%}
+                                <li>
+                                    <label for="slide-{{loop.index}}"><img src="{{img}}" alt="{{imageAlt}}"></label>
+                                </li>
+                                {% endfor %}
+                            </ul>                                                
+                        </div>
+                    </div>
+                </section>
+
+                    
+                    <!-- <picture class="cs-picture">
+ 
                         <source media="(max-width: 600px)" srcset="{{imageUrl}}">
-                        <!--Tablet and above Image-->
+                
                         <source media="(min-width: 601px)" srcset="{{imageUrl}}">
                         <img loading="lazy" decoding="async" src="{{imageUrl}}" alt="{{imageUlt}}" width="1280" height="568">
-                    </picture>
-                </a>
+                    </picture> -->
+               
             </li>
         </div>
     </div>

@@ -58,7 +58,7 @@ eleventyNavigation:
 
             <form class="cs-form" name="Coupon Form" method="post" netlify>
                 <input class="cs-input" type="email" id="cs-email-1393" name="find-us" placeholder="Email Address">
-                <button class="cs-button-solid cs-submit" type="submit">Get a Coupon!</button>
+                <button class="cs-button-solid cs-submit" type="submit">Sign up to our news letter!</button>
             </form>
 
 
@@ -138,10 +138,10 @@ eleventyNavigation:
                     <div class="cs-image-group">
                         <picture class="cs-picture">
                             <!--Mobile Image-->
-                            <source media="(max-width: 600px)" srcset="{{product.data.imageUrl}}">
+                            <source media="(max-width: 600px)" srcset="{{product.data.imageUrl[0]}}">
                             <!--Tablet and above Image-->
-                            <source media="(min-width: 601px)" srcset="{{product.data.imageUrl}}">
-                            <img loading="lazy" decoding="async" src="{{product.data.imageUrl}}" alt="{{product.data.imageAlt}}" width="1280" height="568">
+                            <source media="(min-width: 601px)" srcset="{{product.data.imageUrl[0]}}">
+                            <img loading="lazy" decoding="async" src="{{product.data.imageUrl[0]}}" alt="{{product.data.imageAlt}}" width="1280" height="568">
                         </picture>
                     </div>
                     <div class="cs-details">
@@ -190,9 +190,9 @@ eleventyNavigation:
             </p>
         </div>
         <picture class="cs-background">
-            <source media="(max-width: 600px)" srcset="https://live.staticflickr.com/65535/48840581253_87737651e3_b.jpg">
-            <source media="(min-width: 601px)" srcset="https://live.staticflickr.com/65535/48840581253_87737651e3_b.jpg">
-            <img aria-hidden="true" loading="lazy" decoding="async" src="https://live.staticflickr.com/65535/48840581253_87737651e3_b.jpg" alt="appliance" width="275" height="132">
+            <source media="(max-width: 600px)" srcset="https://i1.pickpik.com/photos/385/74/512/honeycomb-beekeeping-beehive-preview.jpg">
+            <source media="(min-width: 601px)" srcset="https://i1.pickpik.com/photos/385/74/512/honeycomb-beekeeping-beehive-preview.jpg">
+            <img aria-hidden="true" loading="lazy" decoding="async" src="https://i1.pickpik.com/photos/385/74/512/honeycomb-beekeeping-beehive-preview.jpg" alt="appliance" width="275" height="132">
         </picture>
     </div>
 </section>

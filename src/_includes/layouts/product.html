@@ -3,8 +3,8 @@ preloadCSS: '/assets/css/product.css'
 eleventyComputed:
     title: '{{ title }}'
     description: '{{ description }}'
-    preloadImg: '{{ imageUrl }}'
-    permalink: '/blog/{{ title | slug }}/index.html'
+    preloadImg: '{{ imageUrl[0] }}'
+    permalink: '/product/{{ title | slug }}/index.html'
 ---
 
 

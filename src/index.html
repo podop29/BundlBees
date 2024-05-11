@@ -132,7 +132,9 @@ eleventyNavigation:
             <a href="/All-Boxes" class="cs-button-solid">View All Boxes</a>
         </div>
         <div class="cs-card-group">
+            {% set atPost = 0 %}
             {%- for product in collections.product -%}
+            {% if atPost < 4 %}
             <div class="cs-item cs-product">
                 <a  href="{{product.url}}" class="cs-link">
                     <div class="cs-image-group">
@@ -163,6 +165,8 @@ eleventyNavigation:
                     </div>
                 </a>
             </div>
+            {% endif%}
+            {% set atPost = atPost + 1 %}
             {% endfor %}
         </div>
     </div>

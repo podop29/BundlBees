@@ -64,6 +64,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addCollection('products', function(collectionApi){
         return collectionApi.getFilteredByGlob('src/assets/products/**.*.md');
     })
+
     // END SHORTCODES
 
     return {

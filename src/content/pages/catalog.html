@@ -1,0 +1,102 @@
+---
+title: 'All Boxes'
+description: 'Browse our choices'
+preloadImg: '/assets/images/about-us.png'
+permalink: 'All-Boxes/'
+eleventyNavigation:
+    key: All Boxes
+    order: 300
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/catalog.css">
+{% endblock %}
+
+
+{% block body %}
+
+
+
+<!-- ============================================ -->
+<!--                  Collection                  -->
+<!-- ============================================ -->
+
+<!--
+    To add a 4th or 5th collection or more, copy and paste the cs-button and change it's data-filter to the next number, in this case it's 4. Do the same to the cs-listing and its data-category number. And that's it!
+-->
+
+<section id="collection-1602">
+    <div class="cs-container">
+        <div class="cs-content">
+            <h2 class="cs-title">Browse Bundles</h2>
+        </div>
+        <div class="cs-listing-wrapper">
+            <!--Listing 1-->
+            <div class="cs-listing" data-category="one">
+                {%- for product in collections.product -%}
+                    <div class="cs-item">
+                        <a href="{{product.url}}" class="cs-link">
+                            <div class="cs-picture-group">
+                                <picture class="cs-picture">
+                                    <source media="(max-width: 600px)"
+                                            srcset="{{product.data.imageUrl[0]}}">
+                                    <source media="(min-width: 601px)"
+                                            srcset="{{product.data.imageUrl[0]}}">
+                                    <img loading="lazy" decoding="async"
+                                            src="{{product.data.imageUrl[0]}}"
+                                            alt="{{product.data.imageAlt}}" width="305" height="400">
+                                </picture>
+                            </div>
+                            <div class="cs-details">
+                                <h3 class="cs-name">{{product.data.name}}</h3>
+                                <div class="cs-actions">
+                                    <div class="cs-flex">
+                                        <span class="cs-price">{{product.data.price}}</span>
+                                        <div class="cs-stars">
+                                            <img class="cs-star"
+                                                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/review-star.svg"
+                                                    alt="star" height="24" width="24" loading="lazy" decoding="async">
+                                            <img class="cs-star"
+                                                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/review-star.svg"
+                                                    alt="star" height="24" width="24" loading="lazy" decoding="async">
+                                            <img class="cs-star"
+                                                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/review-star.svg"
+                                                    alt="star" height="24" width="24" loading="lazy" decoding="async">
+                                            <img class="cs-star"
+                                                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/review-star.svg"
+                                                    alt="star" height="24" width="24" loading="lazy" decoding="async">
+                                            <img class="cs-star"
+                                                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/review-star.svg"
+                                                    alt="star" height="24" width="24" loading="lazy" decoding="async">
+                                        </div>
+                                    </div>
+                                    <div class="oos">
+                                        Out Of Stock
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                {% endfor %}
+                
+               
+                
+            </div>
+            
+      
+             
+            </div>
+        </div>
+    </div>
+</section>
+                                
+
+
+
+
+
+{% include 'components/cta.html' %}
+
+{% endblock %}

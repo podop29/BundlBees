@@ -5,5 +5,5 @@ description: The Bigelow Medicine Ball is a soothing and comforting drink known 
 price: $19.99
 imageUrl: ["/assets/images/snackboxes/bige/Design 1.jpg", "/assets/images/snackboxes/bige/Med Tea Box 1.jpeg", "/assets/images/snackboxes/bige/Med Tea Box w.jpeg", "/assets/images/snackboxes/bige/Tea Honey.jpg" ]
 tags: -product
-imageAlt: "Picture of Bigelow Tea"
+imageAlt: "Bigelow Tea in a curated gourmet snack box"
 ---

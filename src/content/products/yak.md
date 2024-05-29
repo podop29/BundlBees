@@ -5,5 +5,5 @@ description: The Yellow Yak 3-Pack is a delightful assortment of premium and nut
 price: $19.99
 imageUrl: ["/assets/images/snackboxes/yak/1.jpg", "/assets/images/snackboxes/yak/2.PNG", "/assets/images/snackboxes/yak/3.jpg", "/assets/images/snackboxes/yak/4.jpg"]
 tags: -product
-imageAlt: "Picture of Yellow Yak"
+imageAlt: "Variety sample pack of Yellow Yack"
 ---

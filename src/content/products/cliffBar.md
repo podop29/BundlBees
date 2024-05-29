@@ -5,5 +5,5 @@ description: The Variety Cliff Bar Snack Pack offers a convenient assortment of 
 price: $22.99
 imageUrl: ["/assets/images/snackboxes/cliff/Cliff2.jpg", "/assets/images/snackboxes/cliff/Clif 1.jpg", "/assets/images/snackboxes/cliff/Clif 2.jpg", "/assets/images/snackboxes/cliff/Clif 3.jpg", "/assets/images/snackboxes/cliff/Clif 4.jpg"]
 tags: -product
-imageAlt: "Picture of Cliff bar variety pack"
+imageAlt: "Variety pack of hand curated Cliff bars - snack pack"
 ---

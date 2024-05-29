@@ -5,5 +5,5 @@ description: Bobo's Stuffed 3-Pack is a delightful assortment of stuffed pastrie
 price: $24.99
 imageUrl: ["/assets/images/snackboxes/bobo1/1.jpg", "/assets/images/snackboxes/bobo1/2.jpg", "/assets/images/snackboxes/bobo1/3.png", "/assets/images/snackboxes/bobo1/4.png"]
 tags: -product
-imageAlt: "Picture of bobo stuffed treats"
+imageAlt: "Bobo stuffed snacks in a curated gourmet snack box"
 ---

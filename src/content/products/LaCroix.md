@@ -5,5 +5,5 @@ description: The LaCroix Variety Pack (24 pack) brings a refreshing twist to you
 price: $41.99
 imageUrl: ["/assets/images/snackboxes/Lacroix/lacroi.jpg", "/assets/images/snackboxes/Lacroix/La1.png", "/assets/images/snackboxes/Lacroix/La 2.jpg", "/assets/images/snackboxes/Lacroix/La 3.jpg"]
 tags: -product
-imageAlt: ["Picture of LaCroix product"]
+imageAlt: "Variety snack box of LaCroix flavors"
 ---

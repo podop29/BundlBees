@@ -5,5 +5,5 @@ description: The Illy Ground Coffee Variety Pack presents a curated selection of
 price: $49.99
 imageUrl: ["/assets/images/snackboxes/illy/ily.jpg","/assets/images/snackboxes/illy/IllyCoffee1.png","/assets/images/snackboxes/illy/IllyCoffee2.jpg","/assets/images/snackboxes/illy/IllyCoffee3.jpg"]
 tags: -product
-imageAlt: " Picture of Coffee Illy"
+imageAlt: "Variety of Illy Ground Coffee flavors in a curated snack pack"
 ---

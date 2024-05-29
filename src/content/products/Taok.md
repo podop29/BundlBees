@@ -5,5 +5,5 @@ description: The Taokaenoi USA 2-Pack offers a delightful taste of Thailand's po
 price: $14.99
 imageUrl: ["/assets/images/snackboxes/tao/5.jpg","/assets/images/snackboxes/tao/1.jpeg", "/assets/images/snackboxes/tao/2.jpeg", "/assets/images/snackboxes/tao/3.jpeg", "/assets/images/snackboxes/tao/4.jpeg"]
 tags: -product
-imageAlt: "Picture of Taokaenoi"
+imageAlt: "Picture of Taokaenoi in a curated bundle box"
 ---

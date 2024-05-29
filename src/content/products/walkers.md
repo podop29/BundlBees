@@ -5,5 +5,5 @@ description: The walkerslow Medicine Ball is a soothing and comforting drink kno
 price: $24.99
 imageUrl: ["/assets/images/snackboxes/walkers/2.jpg", "/assets/images/snackboxes/walkers/1.jpg", "/assets/images/snackboxes/walkers/3.jpeg"]
 tags: -product
-imageAlt: "Picture of walkerslow Tea"
+imageAlt: "Picture of walkerslow Tea variety pack in a curated bundlbee snack pack"
 ---

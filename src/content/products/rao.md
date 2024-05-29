@@ -5,5 +5,5 @@ description: The Rao's Dinner Box is a culinary delight that brings the authenti
 price: $19.99
 imageUrl: ["/assets/images/snackboxes/rao/1.jpg", "/assets/images/snackboxes/rao/2.jpeg", "/assets/images/snackboxes/rao/3.jpeg", "/assets/images/snackboxes/rao/4.jpeg"]
 tags: -product
-imageAlt: "Rao Dinner Box"
+imageAlt: "Rao Dinner Box curated bundle box"
 ---

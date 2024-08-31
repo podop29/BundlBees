@@ -51,7 +51,7 @@ eleventyComputed:
                                 <li class="carousel__slide">
                                     <figure>
                                         <div>
-                                            <img src="{{img}}" alt="{{imageAlt}}">
+                                            <img class="mainImg" src="{{img}}" alt="{{imageAlt}}">
                                         </div>      
                                     </figure>
                                 </li>
@@ -64,7 +64,7 @@ eleventyComputed:
 
                                 {%- for img in imageUrl -%}
                                 <li>
-                                    <label for="slide-{{loop.index}}"><img src="{{img}}" alt="{{imageAlt}}"></label>
+                                    <label for="slide-{{loop.index}}"><img class="thumnailImg" src="{{img}}" alt="{{imageAlt}}"></label>
                                 </li>
                                 {% endfor %}
                             </ul>                                                

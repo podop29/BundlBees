@@ -4,7 +4,7 @@
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
   #collection-1596 {
-    padding: clamp(12.75rem, 7.82vw, 6.25rem) 1rem;
+    padding: clamp(7.75rem, 7.82vw, 6.25rem) 1rem;
     background: var(--bodyColor);
   }
   #collection-1596 .cs-container {
@@ -14,8 +14,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* 48px - 64px */
-    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #collection-1596 .mainImg {
+    transform: scale(1.5);
+  }
+  #collection-1596 .thumnailImg {
+    transform: scale(1.4);
   }
   #collection-1596 .cs-content {
     /* set text align to left if content needs to be left aligned */
@@ -183,6 +187,12 @@
     height: clamp(25rem, 50vw, 32.5rem);
     min-height: auto;
     max-height: 100%;
+  }
+  #collection-1596 .mainImg {
+    transform: scale(1.1);
+  }
+  #collection-1596 .thumnailImg {
+    transform: scale(1);
   }
 }
 section {

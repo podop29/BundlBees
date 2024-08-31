@@ -5,7 +5,7 @@
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
     #collection-1596 {
-        padding: clamp(12.75rem, 7.82vw, 6.25rem) 1rem;
+        padding: clamp(7.75rem, 7.82vw, 6.25rem) 1rem;
         background: var(--bodyColor);
         .cs-container {
             width: 100%;
@@ -14,8 +14,14 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            /* 48px - 64px */
-            gap: clamp(3rem, 6vw, 4rem);
+
+        }
+
+        .mainImg{
+            transform: scale(1.5);
+        }
+        .thumnailImg{
+            transform: scale(1.4);
         }
 
         .cs-content {
@@ -214,7 +220,17 @@
             min-height: auto;
             max-height: 100%;
         }
+
+        .mainImg{
+            transform: scale(1.1);
+        }
+        .thumnailImg{
+            transform: scale(1);
+        }
     }
+
+    
+
 }
         
 

@@ -619,7 +619,7 @@
     background-color: var(--bodyColor);
   }
   #collection-1570 .cs-item:hover .cs-picture img {
-    transform: scale(1.65);
+    transform: scale(0.9);
   }
   #collection-1570 .cs-link {
     text-decoration: none;
@@ -642,7 +642,7 @@
     height: 100%;
     object-fit: contain;
     transition: transform 0.3s;
-    transform: scale(1.8);
+    transform: scale(1);
   }
   #collection-1570 .cs-offer {
     font-size: 0.8125rem;

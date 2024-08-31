@@ -192,7 +192,7 @@
     height: 100%;
     object-fit: contain;
     transition: transform 0.3s;
-    transform: scale(1.2);
+    transform: scale(1);
   }
   #collection-1602 .cs-offer {
     font-size: 0.8125rem;

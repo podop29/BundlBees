@@ -710,7 +710,7 @@
             border-radius: 8px;
             background-color: var(--bodyColor);
             &:hover .cs-picture img {
-                transform: scale(1.65);
+                transform: scale(0.9);
             }
         }
 
@@ -737,7 +737,7 @@
                 height: 100%;
                 object-fit: contain;
                 transition: transform .3s;
-                transform: scale(1.8);
+                transform: scale(1);
 
             }
         }

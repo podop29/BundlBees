@@ -42,7 +42,7 @@ eleventyComputed:
                         <div class="carousel">
       
                             {%- for img in imageUrl -%}
-                            <input type="radio" checked="{{ 'checked' if loop.index == 0 }}" name="slides" id="slide-{{loop.index}}">
+                            <input type="radio"  name="slides" id="slide-{{loop.index}}">
                             {% endfor %}
 
                             <ul class="carousel__slides">

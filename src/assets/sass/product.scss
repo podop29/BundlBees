@@ -179,6 +179,7 @@
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
     #collection-1596 {
+        padding: clamp(9.75rem, 7.82vw, 6.25rem) 1rem;
         .cs-container {
             flex-direction: row;
             justify-content: space-between;

@@ -65,10 +65,10 @@
 	    	font-weight: 700;
 	        text-align: center;
             margin: 0;
-            color: #fff;
+            color: white;
             min-width: calc(150 / 16 * 1rem);
             padding: 0 calc(24 / 16 * 1rem);
-            background-color: red;
+            background-color: var(--primary);
             display: inline-block;
             position: relative;
             z-index: 1;
@@ -179,7 +179,7 @@
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
     #collection-1596 {
-        padding: clamp(9.75rem, 7.82vw, 6.25rem) 1rem;
+        padding: clamp(11.75rem, 7.82vw, 6.25rem) 1rem;
         .cs-container {
             flex-direction: row;
             justify-content: space-between;

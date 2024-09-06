@@ -6,4 +6,5 @@ price: $29.99
 imageUrl: ["/assets/images/snackboxes/fd1/fd-1-1.jpg", "/assets/images/snackboxes/fd1/fd-1-2.jpg", "/assets/images/snackboxes/fd1/fd-1-3.jpg", "/assets/images/snackboxes/fd1/fd-1-4.jpg","/assets/images/snackboxes/fd1/fd-1-5.jpg"]
 tags: -product
 imageAlt: "Variety sample pack of freeze dried candies"
+link: "https://amzn.to/3XuJ8p0"
 ---
